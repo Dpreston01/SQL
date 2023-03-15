@@ -1,0 +1,26 @@
+--Create a Sneaker_Collection store Database
+
+CREATE TABLE sneaker_collection (ID INTEGER PRIMARY KEY, name TEXT, size INTEGER, category TEXT, price INTEGER);
+
+INSERT into sneaker_collection VALUES (1,"nike shadow", 12, "basketball", 100);
+INSERT into sneaker_collection VALUES (2,"jordan fire red", 11.5, "basketball",  160);
+INSERT into sneaker_collection VALUES (3,"jordan reto blue", 11, "walking", 120);
+INSERT into sneaker_collection VALUES (4,"checkered vans", 9.5, "walking", 60);
+INSERT into sneaker_collection VALUES (5, "bubble slippers", 11, "house wear", 20);
+INSERT into sneaker_collection VAlUES (6, "air jordan one", 11.5, "basketball", 160);
+INSERT into sneaker_collection VALUES (7, "air jordan two", 10, "football", 200);
+INSERT into sneaker_collection VALUES (8, "nike dunk hi", 11, "basketball", 150);
+INSERT into sneaker_collection VALUES (9, "nike boots", 10, "walking", 250);
+INSERT into sneaker_collection VALUES (10, "what the dunk", 11.5, "walking", 450);
+INSERT into sneaker_collection VALUES (11, "pine green", 11.5, "basketball", 500);
+INSERT into sneaker_collection VALUES (12, "yellow toe", 12, "football", 120);
+INSERT into sneaker_collection VALUES (13, "cool greys", 11.5, "walking", 150);
+INSERT into sneaker_collection VALUES (14, "space jams", 11, "basketball", 200);
+INSERT into sneaker_collection VALUES (15, "orange lobbsters", 11, "walking", 300);
+
+
+--what is the sum for each category? 
+SELECT category, SUM(price) FROM sneaker_collection group by category;
+
+--display the database ordered by price.
+SELECT * FROM sneaker_collection order by price
